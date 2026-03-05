@@ -64,6 +64,7 @@ port_receive(Port, Acc) ->
 port_map_test()->
     Tests = test_data_map(),
     ?assertEqual({[Tests],<<>>}, msgpack:unpack(msgpack:pack([Tests], [{map_format,map}]), [{map_format,map}])),
+	ok.
 
 port_jiffy_test()->
     Tests = test_data_jiffy(),
